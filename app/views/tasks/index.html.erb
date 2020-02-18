@@ -2,10 +2,10 @@
 
 <ul>
 <% @tasks.each do |task| %>
-<li><%= link_to task.title, task_path(task.id) %> <%= link_to "del", del_path(task.id),
+<li><%= link_to task.title, task_path(task.id) %> <%= link_to "del", task_path(task.id),
             method: :delete,
             data: { confirm: "Are you sure?" } %></li>
 <% end %>
 </ul>
 
-<%= link_to "New task", tasks_new_path %>
+<%= link_to "New task", new_task_path %>
